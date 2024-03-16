@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+scikit-learn==1.4.0
+python-multipart
+pandas
+tqdm
+pickle-mixin
+librosa

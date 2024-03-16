@@ -1,0 +1,23 @@
+version: '3.8'
+
+networks:
+  prod_net:
+    driver: bridge
+
+services:
+  reporting-api:
+    container_name: reporting-api
+
+    build:
+      context: .
+      dockerfile: Dockerfile
+    
+    volumes:
+      - ../data:/data
+      - ../artifacts:/artifacts
+    
+    ports:
+      - "8082:8082"
+
+    networks:
+      - prod_net
